@@ -94,7 +94,7 @@ export const ActionsContainer = styled.div`
     font-family: ${props => props.theme.font.normal};
     ${props => props.theme.font_size.xsmall};
     color: white;
-    background: #098b8c;
+    ${props => props.theme.color.buttonbg};
     border-radius: 4px;
     padding: 10px 16px;
     text-transform: uppercase;
@@ -104,7 +104,7 @@ export const ActionsContainer = styled.div`
 
 export const Mobile = styled.div`
   display: none;
-
+  margin-left: auto;
   @media (max-width: ${props => props.theme.screen.xs}) {
     display: block;
   }

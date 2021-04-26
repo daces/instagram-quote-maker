@@ -24,8 +24,10 @@ const theme = {
 
   color: {
     primary: "#071435",
-    secondary: "#098c8c",
+    secondary: "#FD7F18;",
+    buttonbg: "background: #FD7F18; background: linear-gradient(161deg, #f83600 20%, #fe8c00  100%); ",
     accent: "#cca86e",
+    addition: "#ffe2cc",
     background: {
       white: "#ffffff",
       light: "#f8f8f8",

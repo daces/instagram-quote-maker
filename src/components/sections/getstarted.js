@@ -1,13 +1,15 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { Container, Section } from "../global"
+import { DefButton } from "../app/components"
 
 const GetStarted = () => (
-  <StyledSection>
-    <GetStartedContainer>
-      <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
-      <TryItButton>Get early access</TryItButton>
+  <StyledSection id="beta">
+    <GetStartedContainer >
+      <GetStartedTitle>Be the first to try the beta</GetStartedTitle>
+      <Link to="/app/"><TryItButton>Start creating for free</TryItButton></Link>
       <Subtitle>No credit card required.</Subtitle>
     </GetStartedContainer>
   </StyledSection>
@@ -16,7 +18,7 @@ const GetStarted = () => (
 export default GetStarted
 
 const StyledSection = styled(Section)`
-  background-color: ${props => props.theme.color.background.light};
+  background-color: ${props => props.theme.color.addition};
   clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
 `
 
@@ -33,7 +35,7 @@ const GetStartedTitle = styled.h3`
   text-align: center;
 `
 
-const TryItButton = styled.button`
+const TryItButton = styled(DefButton)`
   font-weight: 500;
   font-size: 14px;
   color: white;
@@ -44,7 +46,7 @@ const TryItButton = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: ${props => props.theme.color.secondary};
+  ${props => props.theme.color.buttonbg};
   border-radius: 4px;
   padding: 0px 40px;
   border-width: 0px;

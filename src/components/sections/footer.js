@@ -7,11 +7,9 @@ const Footer = () => (
   <FooterWrapper id="footer">
     <FooterColumnContainer>
       <FooterColumn>
-        <span>Features</span>
-        <ul>
-          <li>Automation</li>
-          <li>Rewards</li>
-        </ul>
+        <BrandContainer>
+        <Logo>QuoteZilla</Logo>
+        </BrandContainer>
       </FooterColumn>
       <FooterColumn>
         <span>Resources</span>
@@ -35,16 +33,13 @@ const Footer = () => (
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
-    <BrandContainer>
-      <Logo>Finance</Logo>
-    </BrandContainer>
+      <CopyRights >Copyright © 2012-2021 QuoteZilla.com. All rights reserved.</CopyRights>
   </FooterWrapper>
 )
 
 const FooterWrapper = styled.footer`
   background-color: white;
   margin: 80px 0 0;
-  padding: 0 0 80px;
 `
 
 const Logo = styled.div`
@@ -65,7 +60,6 @@ const Logo = styled.div`
 
 const BrandContainer = styled(Container)`
   position: relative;
-  padding-top: 48px;
   display: flex;
   align-items: flex-end;
 
@@ -100,5 +94,8 @@ const FooterColumn = styled.div`
     }
   }
 `
-
+const CopyRights = styled.p`
+  padding-top: 48px;
+  text-align: center;
+`
 export default Footer

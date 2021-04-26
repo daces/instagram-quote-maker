@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
 import { Menu, X } from "react-feather"
-
+import styled from "styled-components"
 import { Container } from "../../global"
 import {
   Nav,
@@ -14,8 +14,8 @@ import {
   Mobile,
   ActionsContainer,
 } from "./style"
-
-const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
+import { DefButton } from "../../app/components"
+const NAV_ITEMS = ["Showcase", "Why", "Beta", ""]
 
 export default class Navigation extends Component {
   state = {
@@ -75,11 +75,13 @@ export default class Navigation extends Component {
       <Nav {...this.props} scrolled={this.state.hasScrolled}>
         <StyledContainer>
           <Brand>
+          <AppTitle>
             <Scrollspy offset={-64} item={["top"]} currentClassName="active">
               <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                Finance
+                Quote<span>Zilla</span>
               </AnchorLink>
             </Scrollspy>
+            </AppTitle>
           </Brand>
           <Mobile>
             <button
@@ -96,7 +98,7 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button>Sign up</button>
+            <NavButton>Login</NavButton>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>
@@ -110,3 +112,21 @@ export default class Navigation extends Component {
     )
   }
 }
+
+
+const NavButton = styled(DefButton)`
+padding: 0;
+height: auto;
+`
+const AppTitle = styled.h1`
+display: flex;
+margin-left: 10px;
+font-size: 30px;
+margin: 0;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: -6px;
+& span{
+color: #fc6600;
+letter-spacing: -4px;
+}`

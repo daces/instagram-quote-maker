@@ -9,14 +9,24 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     ${"" /* change this if implementing light/dark mode functionality */}
+    background: #fff;
     color: ${props => props.theme.color.primary};
-
+    margin: 0;
   }
   
   body {
     font-family: ${props => props.theme.font.primary};
+    margin: 0;
   }
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
   
   h1 {
     ${props => props.theme.font_size.xlarge};
@@ -24,8 +34,7 @@ const GlobalStyles = createGlobalStyle`
     
   }
 
-  h2 {
-    ${props => props.theme.font_size.larger};
+  h2 {${props => props.theme.font_size.larger};
   }
 
   h3 {
@@ -107,7 +116,9 @@ const GlobalStyles = createGlobalStyle`
   a {
     cursor: pointer;
   }
-
+.active {
+background: #f1f1f1;
+}
 `
 
 export default GlobalStyles
